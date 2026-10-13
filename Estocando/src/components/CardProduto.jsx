@@ -17,10 +17,9 @@ function CardProduto({ produto }) {
     <div className="produto">
       <div>
         <h3>{produto.nome}</h3>
+        <p>Nome:{produto.nome}</p>
         <p>Categoria: {produto.categoria}</p>
-        <p>
-          Quantidade: <strong>{quantidade}</strong>
-        </p>
+        <p>Quantidade:{quantidade}</p>
 
        
       </div>

@@ -9,7 +9,7 @@ function Formulario({adicionarProdutos}) {
     e.preventDefault();
 
     const novoProduto = {
-        id :nome,
+        nome :nome,
         categoria : categoria,
         quantidade: Number(quantidade)
     }
