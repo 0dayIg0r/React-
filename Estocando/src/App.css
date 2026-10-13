@@ -1,9 +1,9 @@
-/* Configurações globais da página */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   padding: 30px 20px;
 }
 
-/* Container principal da página web */
+
 .app {
   max-width: 1200px;
   margin: 0 auto;
@@ -21,7 +21,7 @@ body {
   gap: 30px;
 }
 
-/* Cabeçalho estilo site/dashboard */
+
 header {
   background: linear-gradient(135deg, #2c3e50, #3498db);
   color: white;
@@ -40,7 +40,7 @@ header p {
   opacity: 0.9;
 }
 
-/* Layout em grade: Formulário de um lado, Lista de produtos do outro */
+
 .conteudo-principal {
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -48,14 +48,7 @@ header p {
   align-items: start;
 }
 
-/* Em telas menores (celular/tablet), empilha os blocos */
-@media (max-width: 850px) {
-  .conteudo-principal {
-    grid-template-columns: 1fr;
-  }
-}
 
-/* Caixa do Formulário */
 .formulario {
   background: white;
   padding: 30px;
@@ -111,7 +104,7 @@ header p {
   background-color: #219150;
 }
 
-/* Seção da Lista de Produtos */
+
 .card {
   background: white;
   padding: 30px;
@@ -127,7 +120,7 @@ header p {
   padding-bottom: 12px;
 }
 
-/* Cada card de produto individual */
+
 .produto {
   background-color: #fafbfc;
   border: 1px solid #e1e4e8;
@@ -156,20 +149,14 @@ header p {
   margin-bottom: 4px;
 }
 
-.aviso {
-  color: #e74c3c !important;
-  font-weight: bold;
-  font-size: 0.85rem !important;
-  margin-top: 6px;
-}
 
-/* Botões de quantidade (+ e -) */
-.acoes {
+
+.controle {
   display: flex;
   gap: 10px;
 }
 
-.acoes button {
+.controle button {
   padding: 10px 16px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
@@ -180,7 +167,7 @@ header p {
   transition: all 0.2s;
 }
 
-.acoes button:hover {
+.controle button:hover {
   background-color: #f1f5f9;
   border-color: #94a3b8;
 }
