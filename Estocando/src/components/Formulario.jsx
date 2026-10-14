@@ -33,9 +33,6 @@ function Formulario({adicionarProdutos, produtos}) {
     setQuantidade("");
   }
 
-// Está podendo adicionar o item duplicado, faça uma verificação se ele já existe no array, caso exista, pode retornar um alert('')
-
-
 
   return (
     <form className="formulario" onSubmit={enviarFormulario}>

@@ -25,7 +25,8 @@ function ListaProdutos({ produtos,index }) {
         </div>
       </div>
 
-      {produtos.length === 0 && <p>Nenhum produto cadastrado.</p>}
+      {produtos.length === 0 && <p className="mensagem-vazia">Nenhum produto cadastrado.</p>}
+
 
       <div>
        {produtos
