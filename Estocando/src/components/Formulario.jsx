@@ -20,6 +20,8 @@ function Formulario({adicionarProdutos}) {
     setCategoria("disable");
     setQuantidade("");
   }
+// O input de quantidade está aceitando números negativos, faça o tratamento de erros, onde, a quantidade inserida deve ser >= 1.
+// Está podendo adicionar o item duplicado, faça uma verificação se ele já existe no array, caso exista, pode retornar um alert('')
 
   return (
     <form className="formulario" onSubmit={enviarFormulario}>
