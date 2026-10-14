@@ -57,6 +57,8 @@ function Formulario({adicionarProdutos}) {
         required
       />
 
+      
+
       <button type="submit">Cadastrar produto</button>
     </form>
   );
