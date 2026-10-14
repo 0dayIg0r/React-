@@ -1,12 +1,24 @@
 import { useState } from "react";
 
-function Formulario({adicionarProdutos}) {
+function Formulario({adicionarProdutos, produtos}) {
   const [nome, setNome] = useState("");
   const [categoria, setCategoria] = useState("");
   const [quantidade, setQuantidade] = useState("");
 
   function enviarFormulario(e) {
     e.preventDefault();
+
+    if(produtos){
+      const produtoExistente = produtos.some(
+        (produto) => produto.nome.trim().toLowerCase() === nome.trim().toLowerCase()
+      )
+
+      if (produtoExistente) {
+        alert('Este produto ja foi adicionado!')
+          return
+        
+      }
+    }
 
     const novoProduto = {
         nome :nome,
@@ -20,6 +32,10 @@ function Formulario({adicionarProdutos}) {
     setCategoria("disable");
     setQuantidade("");
   }
+
+// Está podendo adicionar o item duplicado, faça uma verificação se ele já existe no array, caso exista, pode retornar um alert('')
+
+
 
   return (
     <form className="formulario" onSubmit={enviarFormulario}>
@@ -52,7 +68,7 @@ function Formulario({adicionarProdutos}) {
         type="number"
         id="quantidade"
         value={quantidade}
-        onChange={(e) => setQuantidade(e.target.value)}
+        onChange={(e) =>Number(e.target.value)>= 1 ? setQuantidade(e.target.value) : alert('Valor inválido')}
         placeholder="Ex.: 10"
         required
       />

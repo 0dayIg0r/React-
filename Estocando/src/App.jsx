@@ -18,7 +18,7 @@ function App() {
         titulo="Meu Estoque" 
         resumo="Cadastro de produtos" 
       />  
-      <Formulario adicionarProdutos={adicionarProduto} />
+      <Formulario adicionarProdutos={adicionarProduto} produtos={produtos} />
       <ListaProdutos produtos={produtos} />
     </div>
   );
